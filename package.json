@@ -1,0 +1,17 @@
+{
+  "name": "lua-financas",
+  "version": "0.9.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5177 --host",
+    "build": "vite build",
+    "preview": "vite preview --port 5174"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "jspdf": "^4.2.1"
+  }
+}

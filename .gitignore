@@ -1,0 +1,27 @@
+# Crie o arquivo .gitignore
+cat > .gitignore << 'EOF'
+# Dependências
+node_modules/
+package-lock.json
+
+# Build
+dist/
+.vite/
+
+# Ambiente
+.env
+.env.local
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+EOF
+TODO.md
