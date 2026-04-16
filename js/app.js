@@ -361,7 +361,30 @@ function closeOffcanvas() {
 }
 function logout() {
     if (confirm('Deseja sair? Os dados permanecem salvos.')) {
-        location.reload();
+        // Mostra a tela de login
+        const loginScreen = document.getElementById('login-screen');
+        const appContainer = document.querySelector('.app-container');
+        const loginForm = document.getElementById('loginForm');
+        
+        // Limpa os campos de login
+        if (loginForm) {
+            loginForm.reset();
+        }
+        
+        // Esconde o erro de login se estiver visível
+        const loginError = document.getElementById('loginError');
+        if (loginError) {
+            loginError.style.display = 'none';
+        }
+        
+        // Mostra login e esconde app
+        loginScreen.style.display = 'flex';
+        appContainer.style.display = 'none';
+        
+        // NÃO recarrega a página - mantém o CSS carregado!
+        
+        // Opcional: Limpa dados sensíveis da memória
+        // Mas mantém as preferências de tema
     }
 }
 function setDefaultDates() {
