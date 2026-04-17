@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Força o Opera a não interferir -->
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta name="opera" content="no-cache">
-    
-    <!-- Previne que o Opera force tema escuro -->
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <meta name="theme-color" content="#e86f9c">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Lua Finanças">
     <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9Ijk2IiBjeT0iOTYiIHI9Ijk2IiBmaWxsPSIjRTg2RjlDIi8+CjxjaXJjbGUgY3g9Ijc0IiBjeT0iNjkiIHI9IjE0IiBmaWxsPSIjRkZGIi8+CjxjaXJjbGUgY3g9IjExOCIgY3k9IjY5IiByPSIxNCIgZmlsbD0iI0ZGRiIvPgo8cGF0aCBkPSJNOSAxMzMgQzkgMTMzIDM3LjE5OTk5IDkzIDY1IDkzIEw3MSA5MyBDNzMuMDgwMDMgOTMgNzUgOTAuOTgwMDAzIDc1IDg4LjkyMDAwMyBDNzUgODYuODQwMDAzIDczLjA4MDAwMyA4NSA3MSA4NSBMMzEgODUgQzI5LjkxOTk5NyA4NSAyOCAxODYuMDgwMDMgMjggODguMDIwMDAzIEMyOCA4Ni4wNDAwMDMgMjkuOTE5OTk3IDg1IDMxIDg1IEw2NSA4NSBDNjYuMDgwMDMgODUgNjggODYuMDIwMDAzIDY4IDg4LjAyMDAwMyBDNjggOTAuMDgwMDAzIDY2LjA4MDAwMyA5MSA2NSA5MSBMNzEgOTEgQzc5LjIwMDAwMyA5MSAxMDcuOTk5OTkgMTMxIDExOSA5MyBMMTIzIDkzIEMxMjUuMDgwMDMgOTMgMTI3IDkwLjk4MDAwMyAxMjcgODguOTIwMDAzIEMxMjcgODYuODQwMDAzIDEyNS4wODAwMDMgODUgMTIzIDg1IEwxODMgODUgQzE4NC4wODAwMDMgODUgMTg2IDg2LjA0MDAwMyAxODYgODguMDIwMDAzIEMxODYgOTAuMDgwMDAzIDE4NC4wODAwMDMgOTEgMTgzIDkxIEwxMjMgOTEgQzExMC43OTk5OSAxMzMgODIgMTMzIDcxIDkzIEw2NSA5MyBDNjIuODE5OTk3IDkzIDYxIDkxLjE4MDAwMyA2MSA4OS4xMjAwMDMgQjkgODkuMTIwMDAzIDkgOTEuMTgwMDAzIDkgOTMuMTIwMDAzIEw5IDEzMyBaIE0xMTcgMTE1LjI1IEMxMTcgMTE1LjI1IDEwMi44OTk5OTkgMTE1LjI1IDEwMSAxMTUuMjUgTDEwMSAxMTUuMjUgQzEwMC4xOTE5OTkgMTE1LjI1IDk5LjI1MDAwMDMgMTE2LjEwMDAwMyA5OS4yNTAwMDAzIDExNy4wODAwMDMgTDk5LjI1MDAwMyAxMjEuMDgwMDAzIEM5OS4yNTAwMDAzIDExOC4wNjAwMDMgMTAwLjEwMDAwMyAxMTkuMDEwMDAzIDEwMSAxMTkuMDEwMDAzIEwxMTcgMTE5LjAxMDAwMyBDMTE3LjkxOTk5NyAxMTkuMDEwMDAzIDExOC44MTAwMDMgMTE4LjA2MDAwMyAxMTguODEwMDAzIDExNy4wODAwMDMgTDExOC44MTIwMDAzIDExNy4wODAwMDMgQzExOC44MTIwMDAzIDExNi4xMDAwMDMgMTE3LjkxOTk5NyAxMTUuMjUgMTE3IDExNS4yNSBaIiBmaWxsPSIjRkZGIi8+Cjwvc3ZnPgo=">
-    <title>✨ Lua Finanças · Dashboard & Metas</title>
+    <title>✨ Lua Finanças</title>
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Chart.js -->
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- jsPDF e html2canvas para exportação PDF -->
+    <!-- jsPDF e html2canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <!-- CSS principal -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
 <div id="toast-container"></div>
 
 <!-- Modal de confirmação -->
@@ -53,31 +48,6 @@
         <div class="header-actions" id="headerActions">
             <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i> <span>Menu</span></button>
         </div>
-        <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
-        <div class="offcanvas" id="offcanvasMenu">
-            <div class="offcanvas-header">
-                <h4><i class="fas fa-cog"></i> Configurações</h4>
-                <button class="btn" id="closeOffcanvas"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="offcanvas-content">
-                <button class="btn" id="themeToggleBtn" style="width:100%; justify-content:flex-start; margin-bottom:8px;"><i class="fas fa-moon"></i> Alternar Tema</button>
-                <button class="btn" id="manageCategoriesBtn" style="width:100%; justify-content:flex-start; margin-bottom:8px;"><i class="fas fa-tags"></i> Gerenciar Categorias</button>
-                <select id="themeColorSelect" class="btn" style="width:100%; margin-bottom:16px;">
-                    <option value="340">🌸 Tema Rosa</option>
-                    <option value="200">💙 Tema Azul</option>
-                    <option value="120">💚 Tema Verde</option>
-                    <option value="25">🧡 Tema Laranja</option>
-                    <option value="280">💜 Tema Roxo</option>
-                </select>
-                <!-- Configuração do dia de pagamento -->
-                <div style="margin-bottom:16px;">
-                    <label style="display:block; margin-bottom:5px; color:var(--text-primary);"><i class="fas fa-calendar-alt"></i> Dia do pagamento:</label>
-                    <input type="number" id="salaryDayInput" min="1" max="31" value="5" style="width:100%; padding:8px; border-radius:30px; border:1px solid var(--input-border); background:var(--input-bg); color:var(--text-primary);">
-                </div>
-                <button class="btn" id="clearAllBtn" style="width:100%; justify-content:flex-start; background:#f8d7da; color:#721c24; border-color:#f5c6cb;"><i class="fas fa-trash-alt"></i> Limpar Todos os Dados</button>
-                <button class="btn" id="logoutBtn" style="width:100%; justify-content:flex-start; margin-top:16px;"><i class="fas fa-sign-out-alt"></i> Sair / Logout</button>
-            </div>
-        </div>
     </div>
 
     <!-- Cards de resumo -->
@@ -89,16 +59,16 @@
 
     <!-- Abas de navegação -->
     <div class="tabs">
-        <button class="tab-btn active" data-tab="dashboard-tab"><i class="fas fa-chart-pie"></i> Dashboard</button>
-        <button class="tab-btn" data-tab="transactions-tab"><i class="fas fa-receipt"></i> Transações</button>
-        <button class="tab-btn" data-tab="cards-tab"><i class="fas fa-credit-card"></i> Cartões</button>
-        <button class="tab-btn" data-tab="budget-tab"><i class="fas fa-coins"></i> Orçamento Mensal</button>
-        <button class="tab-btn" data-tab="cashflow-tab"><i class="fas fa-chart-bar"></i> Fluxo Caixa</button>
-        <button class="tab-btn" data-tab="invoices-tab"><i class="fas fa-file-invoice-dollar"></i> Faturas Cartões</button>
-        <button class="tab-btn" data-tab="manage-tab"><i class="fas fa-cogs"></i> Gerenciar</button>
+        <button class="tab-btn active" data-tab="dashboard-tab"><i class="fas fa-chart-pie"></i> <span>Dashboard</span></button>
+        <button class="tab-btn" data-tab="transactions-tab"><i class="fas fa-receipt"></i> <span>Transações</span></button>
+        <button class="tab-btn" data-tab="cards-tab"><i class="fas fa-credit-card"></i> <span>Cartões</span></button>
+        <button class="tab-btn" data-tab="budget-tab"><i class="fas fa-coins"></i> <span>Orçamento</span></button>
+        <button class="tab-btn" data-tab="cashflow-tab"><i class="fas fa-chart-bar"></i> <span>Fluxo</span></button>
+        <button class="tab-btn" data-tab="invoices-tab"><i class="fas fa-file-invoice-dollar"></i> <span>Faturas</span></button>
+        <button class="tab-btn" data-tab="manage-tab"><i class="fas fa-cogs"></i> <span>Gerenciar</span></button>
     </div>
 
-    <!-- Conteúdo das abas -->
+    <!-- Conteúdo das abas (mantido integralmente do original) -->
     <!-- Dashboard -->
     <div id="dashboard-tab" class="tab-content active">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
@@ -219,27 +189,81 @@
                 <h4><i class="fas fa-palette"></i> Aparência</h4>
                 <button class="btn" id="themeToggleBtnManage" style="width:100%; margin-bottom:12px;"><i class="fas fa-moon"></i> Alternar Tema</button>
                 <select id="themeColorSelectManage" class="btn" style="width:100%;"><option value="340">🌸 Rosa</option><option value="200">💙 Azul</option><option value="120">💚 Verde</option><option value="25">🧡 Laranja</option><option value="280">💜 Roxo</option></select>
+                <div style="margin-bottom:16px;">
+                    <label style="display:block; margin-bottom:5px; color:var(--text-primary);"><i class="fas fa-calendar-alt"></i> Dia do próximo salário:</label>
+                    <input type="number" id="salaryDayInputManage" min="1" max="31" value="5" style="width:100%; padding:8px; border-radius:30px; border:1px solid var(--input-border); background:var(--input-bg); color:var(--text-primary);">
+                </div>
                 <button class="btn" id="logoutBtnManage" style="width:100%; margin-top:16px;"><i class="fas fa-sign-out-alt"></i> Sair</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Splash Screen -->
-<div id="splash-screen" style="display: none;">
-    <div class="splash-content"><i class="fas fa-piggy-bank" style="font-size:4rem;"></i><h2>Lua Finanças</h2><p>versão 1.0 · sua evolução financeira</p><div class="spinner"></div></div>
+<!-- Offcanvas -->
+<div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+<div class="offcanvas" id="offcanvasMenu">
+    <div class="offcanvas-header">
+        <h4><i class="fas fa-cog"></i> Configurações</h4>
+        <button class="btn" id="closeOffcanvas"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="offcanvas-content">
+        <button class="btn" id="themeToggleBtn" style="width:100%; justify-content:flex-start; margin-bottom:8px;"><i class="fas fa-moon"></i> Alternar Tema</button>
+        <button class="btn" id="manageCategoriesBtn" style="width:100%; justify-content:flex-start; margin-bottom:8px;"><i class="fas fa-tags"></i> Gerenciar Categorias</button>
+        <select id="themeColorSelect" class="btn" style="width:100%; margin-bottom:16px;">
+            <option value="340">🌸 Tema Rosa</option>
+            <option value="200">💙 Tema Azul</option>
+            <option value="120">💚 Tema Verde</option>
+            <option value="25">🧡 Tema Laranja</option>
+            <option value="280">💜 Tema Roxo</option>
+        </select>
+        <div style="margin-bottom:16px;">
+            <label style="display:block; margin-bottom:5px; color:var(--text-primary);"><i class="fas fa-calendar-alt"></i> Dia do pagamento:</label>
+            <input type="number" id="salaryDayInput" min="1" max="31" value="5" style="width:100%; padding:8px; border-radius:30px; border:1px solid var(--input-border); background:var(--input-bg); color:var(--text-primary);">
+        </div>
+        <button class="btn" id="clearAllBtn" style="width:100%; justify-content:flex-start; background:#f8d7da; color:#721c24; border-color:#f5c6cb;"><i class="fas fa-trash-alt"></i> Limpar Todos os Dados</button>
+        <button class="btn" id="logoutBtn" style="width:100%; justify-content:flex-start; margin-top:16px;"><i class="fas fa-sign-out-alt"></i> Sair / Logout</button>
+    </div>
 </div>
 
-<!-- Tela de Login -->
+<!-- Splash Screen -->
+<div id="splash-screen" style="display: none;">
+    <i class="fas fa-piggy-bank" style="font-size:4rem;"></i>
+    <h2>Lua Finanças</h2><p>sua evolução financeira</p><div class="spinner"></div>
+</div>
+
+<!-- Tela de Login (versão aprimorada) -->
 <div id="login-screen">
+    <div class="login-background">
+        <div class="login-shape login-shape-1"></div>
+        <div class="login-shape login-shape-2"></div>
+        <div class="login-shape login-shape-3"></div>
+    </div>
     <div class="login-content">
-        <h2><i class="fas fa-lock"></i> Bem-vindo(a)</h2>
+        <div class="login-logo">
+        <img src="./assets/icons/lua.png" alt="Lua" class="login-logo-img">
+            <h1>Lua Finanças</h1>
+            <p class="login-tagline">Para o meu xuxu juntar dinheiros para mim</p>
+        </div>
         <form id="loginForm">
-            <div class="login-input-group"><label>Usuário</label><i class="fas fa-user login-input-icon"></i><input type="text" id="loginUser" class="login-input" required></div>
-            <div class="login-input-group"><label>Senha</label><i class="fas fa-key login-input-icon"></i><input type="password" id="loginPass" class="login-input" required></div>
-            <div id="loginError" class="login-error"><i class="fas fa-exclamation-triangle"></i> Usuário ou senha incorretos!</div>
-            <button type="submit" class="login-btn">Entrar(1.0 - Beta)</button>
+            <div class="login-input-group">
+                <i class="fas fa-user login-input-icon"></i>
+                <input type="text" id="loginUser" class="login-input" placeholder="Usuário" required>
+            </div>
+            <div class="login-input-group">
+                <i class="fas fa-lock login-input-icon"></i>
+                <input type="password" id="loginPass" class="login-input" placeholder="Senha" required>
+            </div>
+            <div id="loginError" class="login-error">
+                <i class="fas fa-exclamation-circle"></i> Usuário ou senha incorretos!
+            </div>
+            <button type="submit" class="login-btn">
+                <span>Entrar</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </form>
+        <div class="login-footer">
+        <span class="app-version">Versão 1.0 · Alfa</span>
+        </div>
     </div>
 </div>
 

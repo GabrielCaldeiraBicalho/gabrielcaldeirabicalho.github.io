@@ -104,19 +104,29 @@ function updateDaysUntilSalary() {
 }
 
 function loadSalaryDaySetting() {
-    const input = document.getElementById('salaryDayInput');
-    if (input) {
-        const saved = localStorage.getItem('luaFinances_salaryDay') || '5';
-        input.value = saved;
-        input.addEventListener('change', (e) => {
-            const day = parseInt(e.target.value);
-            if (day >= 1 && day <= 31) {
-                localStorage.setItem('luaFinances_salaryDay', day);
-                updateDaysUntilSalary();
-                showToast('Dia de pagamento atualizado!', 'success');
-            }
-        });
-    }
+    const inputs = ['salaryDayInput', 'salaryDayInputManage'];
+    inputs.forEach(id => {
+        const input = document.getElementById(id);
+        if (input) {
+            const saved = localStorage.getItem('luaFinances_salaryDay') || '5';
+            input.value = saved;
+            input.addEventListener('change', (e) => {
+                const day = parseInt(e.target.value);
+                if (day >= 1 && day <= 31) {
+                    localStorage.setItem('luaFinances_salaryDay', day);
+                    // Sync other input
+                    inputs.forEach(otherId => {
+                        if (otherId !== id) {
+                            const otherInput = document.getElementById(otherId);
+                            if (otherInput) otherInput.value = day;
+                        }
+                    });
+                    updateDaysUntilSalary();
+                    showToast('Dia do próximo salário atualizado!', 'success');
+                }
+            });
+        }
+    });
 }
 
 function renderBudgetTab() {

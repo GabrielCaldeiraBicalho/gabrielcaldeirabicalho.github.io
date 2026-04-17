@@ -1,9 +1,11 @@
-// vite.config.js
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'
+import dns from 'dns'
+
+dns.setDefaultResultOrder('verbatim')
 
 export default defineConfig({
   server: {
-    port: 5180,
-    hmr: false  // Desabilita WebSocket
+    port: 5173,
+    strictPort: true
   }
-});
+})
